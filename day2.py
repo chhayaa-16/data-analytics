@@ -1,4 +1,4 @@
-#que 1 
+#====================day 2 -----que 1================== 
 # company employee payroll system
 # create var for -
 # Employee_name 
@@ -411,88 +411,88 @@
 # #cut emi price
 # Salary -= EMI 
 
-# print("Remaining Balance after EMIs :",Salary)
+# # print("Remaining Balance after EMIs :",Salary)
 
-# #add cashback
+# # #add cashback
 
-# Salary += cashback
-# print("total amount : ", Salary )
+# # Salary += cashback
+# # print("total amount : ", Salary )
 
-# # compare
-# Salary < Savings
-# print("salary is greater than savings : ",Salary < Savings)
+# # # compare
+# # Salary < Savings
+# # print("salary is greater than savings : ",Salary < Savings)
 
-# total_expense == Salary
-# print("total expencse == saalary",total_expense == Salary)
-
-
-
-
-# 7. Cricket Tournament Statistics 
-# Create variables for
-
-# Total Runs
-# Total Balls
-# Total Fours
-# Total Sixes
-# Total Matches
-
-# Calculate
-
-# Strike Rate
-# Average Runs per Match
-# Boundary Runs
-# Boundary Percentage
-
-# Compare
-
-# Strike Rate > 150
-# Boundary Runs > Half of Total Runs
-# Hint
-
-# Boundary Runs
-
-# (Fours × 4) + (Sixes × 6)
+# # total_expense == Salary
+# # print("total expencse == saalary",total_expense == Salary)
 
 
 
 
+# # 7. Cricket Tournament Statistics 
+# # Create variables for
 
-Total_Runs=int(input("total runs : "))
-Total_Balls=int(input("total balls : "))
-Total_Fours=int(input("total fours : "))
-Total_Sixes=int(input("total sixs : "))
-Total_Matches=int(input("total matches : "))
+# # Total Runs
+# # Total Balls
+# # Total Fours
+# # Total Sixes
+# # Total Matches
 
+# # Calculate
 
+# # Strike Rate
+# # Average Runs per Match
+# # Boundary Runs
+# # Boundary Percentage
 
-strike_rate= (Total_Runs / Total_Balls) *100
-print("strike rate : ",strike_rate)
+# # Compare
 
+# # Strike Rate > 150
+# # Boundary Runs > Half of Total Runs
+# # Hint
 
-average_runs = Total_Runs / Total_Matches
-print("average runs : ",average_runs)
+# # Boundary Runs
 
-
-boundary_runs = (Total_Fours* 4) + (Total_Sixes * 6)
-print("boundry runs : ",boundary_runs)
-
-boundary_percentage = (boundary_runs / Total_Runs) * 100
-print("boundry percentage : ",boundary_percentage)
-
-
-
-
-strike_rate > 150
-print("Strike Rate > 150:", strike_rate > 150)
-
-
-strike_rate > 150
-print("Strike Rate > 150:", strike_rate > 150)
+# # (Fours × 4) + (Sixes × 6)
 
 
 
-# 8. Mobile EMI Calculator 
+
+
+# Total_Runs=int(input("total runs : "))
+# Total_Balls=int(input("total balls : "))
+# Total_Fours=int(input("total fours : "))
+# Total_Sixes=int(input("total sixs : "))
+# Total_Matches=int(input("total matches : "))
+
+
+
+# strike_rate= (Total_Runs / Total_Balls) *100
+# print("strike rate : ",strike_rate)
+
+
+# average_runs = Total_Runs / Total_Matches
+# print("average runs : ",average_runs)
+
+
+# boundary_runs = (Total_Fours* 4) + (Total_Sixes * 6)
+# print("boundry runs : ",boundary_runs)
+
+# boundary_percentage = (boundary_runs / Total_Runs) * 100
+# print("boundry percentage : ",boundary_percentage)
+
+
+
+
+# strike_rate > 150
+# print("Strike Rate > 150:", strike_rate > 150)
+
+
+# strike_rate > 150
+# print("Strike Rate > 150:", strike_rate > 150)
+
+
+
+# =======================8. Mobile EMI Calculator 
 # Problem
 
 # Create variables for
@@ -515,40 +515,223 @@ print("Strike Rate > 150:", strike_rate > 150)
 # Loan Amount == Mobile Price
 
 
-mobilePrice = int(input("mobile price : "))
-downPayment = int(input("down payment : "))
-interestRate = int(input("interest rate : "))
-emiMonths = int(input("emi months : "))
+# mobilePrice = int(input("mobile price : "))
+# downPayment = int(input("down payment : "))
+# interestRate = int(input("interest rate : "))
+# emiMonths = int(input("emi months : "))
 
 
 
 
-loan_amount = mobilePrice - downPayment
-print("Loan amount : ",loan_amount)
+# loan_amount = mobilePrice - downPayment
+# print("Loan amount : ",loan_amount)
 
 
-interest_amount = (loan_amount * interestRate * emiMonths) / (100 * 12)
-print("Interest amount : ",interest_amount)
-
-
-
-total_payable = loan_amount + interest_amount
-print("toatal payble : ",total_payable)
-
-
-monthly_emi = total_payable / emiMonths
-print("monthly EMI : ", monthly_emi)
+# interest_amount = (loan_amount * interestRate * emiMonths) / (100 * 12)
+# print("Interest amount : ",interest_amount)
 
 
 
+# total_payable = loan_amount + interest_amount
+# print("toatal payble : ",total_payable)
 
-monthly_emi > 3000
-print("EMI > ₹3000 :", monthly_emi > 3000)
 
-loan_amount == mobilePrice
-print("Loan Amount == Mobile Price :", loan_amount == mobilePrice)
+# monthly_emi = total_payable / emiMonths
+# print("monthly EMI : ", monthly_emi)
 
 
 
 
+# monthly_emi > 3000
+# print("EMI > ₹3000 :", monthly_emi > 3000)
+
+# loan_amount == mobilePrice
+# print("Loan Amount == Mobile Price :", loan_amount == mobilePrice)
+
+
+# ======================9. Electricity Bill with Extra Charges
+# Problem
+
+# Create variables for
+
+# Units
+# Unit Rate
+# Fixed Charge
+# Fuel Charge
+# Electricity Duty %
+# GST %
+
+# Calculate
+
+# Energy Charge
+# Subtotal
+# Duty
+# GST
+# Final Bill
+
+# Compare
+
+# Final Bill > ₹5000
+# GST > Fuel Charge
+
+
+Units = 450
+Unit_Rate = 8
+Fixed_Charge = 200
+Fuel_Charge = 500
+Electricity_Duty = 5
+GST = 18
+
+
+Energy_Charge = Units * Unit_Rate
+print("Energy Charge =", Energy_Charge)
+
+Subtotal = Energy_Charge + Fixed_Charge + Fuel_Charge
+print("Subtotal =", Subtotal)
+
+Duty = (Subtotal * Electricity_Duty) / 100
+print("Duty =", Duty)
+
+GST_Amount = (Subtotal * GST) / 100
+print("GST =", GST_Amount)
+
+Final_Bill = Subtotal + Duty + GST_Amount
+print("Final Bill =", Final_Bill)
+
+
+
+print("Final Bill > ₹5000 :", Final_Bill > 5000)
+print("GST > Fuel Charge :", GST_Amount > Fuel_Charge)
+
+
+
+
+
+
+# 10. Complete Employee Performance Report (Master Challenge)
+# Problem
+
+# Create variables for
+
+# Employee Name
+# Employee ID
+# Basic Salary
+# Bonus
+# Target Achieved
+# Sales
+# Attendance Percentage
+# Working Days
+# Leave Days
+
+# Calculate
+
+# Gross Salary
+# Net Salary
+# Daily Salary
+# Salary per Working Day
+# Average Sales per Day
+
+# Update values using assignment operators:
+
+# Add Performance Bonus
+# Deduct Late Penalty
+# Add Travel Allowance
+
+# Now compare
+
+# Net Salary > ₹75,000
+# Attendance >= 95
+# Sales > Target
+# Leave Days == 0
+# Working Days != Leave Days
+
+# Finally print a well-formatted report.
+
+# Hint
+
+# Solve this in five steps:
+
+# Create all variables.
+# Perform arithmetic calculations.
+# Update values using assignment operators (+=, -=).
+# Perform relational comparisons (>, <, ==, !=, >=, <=).
+# Print every calculated value and comparison result.
+
+
+
+print("EMPLOYEE PERFORMANCE REPORT")
+Employee_Name = "Chhaya patil"
+print("Employee Name  :", Employee_Name)
+
+Employee_ID = 1
+print("Employee ID :", Employee_ID)
+
+Basic_Salary = 60000
+print("Basic Salary : ", Basic_Salary)
+
+Bonus = 1000
+print("Bonus : ", Bonus)
+
+
+Target_Achieved = 500000
+Sales = 550000
+Attendance_Per = 96
+Working_Days = 25
+Leave_Days = 0
+
+
+Gross_Salary = Basic_Salary + Bonus
+print("Gross Salary : ", Gross_Salary)
+
+
+Net_Salary = Gross_Salary
+
+print("Net Salary: ", Net_Salary)
+
+
+Daily_Salary = Basic_Salary / 30
+print("Daily Salary  : ", Daily_Salary)
+
+Salary_Per_Working_Day = Basic_Salary / Working_Days
+print("Salary per Working Day : ", Salary_Per_Working_Day)
+
+
+Average_Sales_Per_Day = Sales / Working_Days
+print("Average Sales per Day  : ₹", Average_Sales_Per_Day)
+
+Performance_Bonus = 5000
+Net_Salary += Performance_Bonus
+print("Performance Bonus : ", Performance_Bonus)
+
+
+Late_Penalty = 2000
+Net_Salary -= Late_Penalty
+print("Late Penalty : ", Late_Penalty)
+
+Travel_Allowance = 3000
+Net_Salary += Travel_Allowance
+print("Travel Allowance  : ", Travel_Allowance)
+
+Salary_Check = Net_Salary > 75000
+
+Attendance_Check = Attendance_Per>= 95
+
+Sales_Check = Sales > Target_Achieved
+
+Leave_Check = Leave_Days == 0
+
+Working_Days_Check = Working_Days != Leave_Days
+
+
+print("Target : ", Target_Achieved)
+print("Sales  : ", Sales)
+print("Attendance :", Attendance_Per, "%")
+print("Working Days :", Working_Days)
+print("Leave Days :", Leave_Days)
+
+print("Net Salary > ₹75000 :", Salary_Check)
+print("Attendance >= 95%  :", Attendance_Check)
+print("Sales > Target  :", Sales_Check)
+print("Leave Days == 0 :", Leave_Check)
+print("Working Days != Leave  :", Working_Days_Check)
 
