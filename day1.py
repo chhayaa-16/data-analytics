@@ -1,23 +1,23 @@
 
 
-# #partA : arithmetic operator
-# #Q-1 Employee Salary Calculator
-# Create variables to store:
-# Basic Salary 
-# Calculate:
-# HRA (20% of Basic Salary) 
-# DA (15% of Basic Salary) 
-# PF (12% of Basic Salary) 
-# Net Salary 
-# Display all values.
+# # #partA : arithmetic operator
+# # #Q-1 Employee Salary Calculator
+# # Create variables to store:
+# # Basic Salary 
+# # Calculate:
+# # HRA (20% of Basic Salary) 
+# # DA (15% of Basic Salary) 
+# # PF (12% of Basic Salary) 
+# # Net Salary 
+# # Display all values.
 
 
 
 
 
 
-# basic_Salary=25000
-# print("Basic Salary :", basic_Salary)
+# basic_Salary=25000                                            basic_salary=int(input("enter basic salary : "))
+# # print("Basic Salary :", basic_Salary)
 
 # hra=basic_Salary*20/100
 # print("HRA (20%):", hra)
@@ -97,7 +97,7 @@
 # print("Perimeter of Rectangle is:", perimeter)
 
 
-#Q4----Petrol Expense Calculator
+# Q4----Petrol Expense Calculator
 # Create variables for:
 # Distance 
 # Mileage 
@@ -126,7 +126,7 @@
 
 
 
-# #Q5--- GST calculator 
+# #Q5 --- GST calculator 
 
 # Problem
 # Create a variable for product price.
@@ -144,8 +144,7 @@
 
 
 # product_price=int(input("enter product price : "))
-
-# gst=(product_price * 18 ) / 100
+# # gst=(product_price * 18 ) / 100
 # print(gst)
 
 # final_price=(product_price + gst)
@@ -157,7 +156,7 @@
 
 
 
-#Question 6 – Time Converter
+# Question 6 – Time Converter
 # Problem
 # Create a variable storing total seconds.
 # Convert it into:
@@ -188,13 +187,13 @@
 # sec=int(input("Enter seconds :"))
 # print("total seconds : ",sec)
 # hours=(sec / 3600 )
-# print("in hours : ",hours)
+# print("Hours : ",hours)
 
 # minute=(sec / 60 )
-# print("in minute : ",minute)
+# print("Minute : ",minute)
 
 # seconds=(sec % 60 )
-# print("in second : ",seconds)
+# print("Second : ",seconds)
 
 # Question 7 – Currency Converter
 # Problem
@@ -318,7 +317,7 @@
 # print("Volume of Cube:", volume)
 # print("Total Surface Area of Cube:", surface_area)
 
-#Part B – Assignment Operators--------------
+# Part B – Assignment Operators--------------
 # #Question 11 – Wallet Balance
 # Problem
 # Create variables to store:
@@ -377,7 +376,7 @@
 # balance * 2
 # print("balance after add interest : ",balance)
 
-#Question 13 – Student Marks Update
+# Question 13 – Student Marks Update
 # Create a variable named marks.
 # Perform:
 # Add Grace Marks 
@@ -398,7 +397,7 @@
 # marks /= 2
 # print("Divide marks:", marks)
 
-#Question 14 – Inventory Management
+# Question 14 – Inventory Management
 # Problem
 # Create a variable named stock.
 # Update stock after:
@@ -458,7 +457,7 @@
 
 
 
-#Question 16 – Mobile Data Balance
+# Question 16 – Mobile Data Balance
 # Problem
 # Create a variable named data_balance.
 # Perform:
@@ -489,7 +488,7 @@
 
 
 
-#Question 17 – Population Growth
+# Question 17 – Population Growth
 # Problem
 # Create a variable named population.
 # Increase population by 10%.

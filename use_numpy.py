@@ -23,7 +23,7 @@
 import numpyyy as np
 
 mark=np.array([
-    [65,788,56,33,98]
+    [65,78,56,33,98]
     [34,98,23,77,56,]
     [77,35,96,75,84]
 ])
@@ -44,6 +44,25 @@ def per ():
     percentage = np.sum(totals)
     return (totals*100)/percentage
      
+def show_result():
+    total = total()
+    average = average()
+    highest = highest_mark()
+    percentage = per()
+
+    print("total marks",total)
+    print("Average marks",average)
+    print("Highest marks student",highest +1)
+    print("highest total marks :",total[highest])
+    print("percentage :",percentage)
 
 
+
+###bar chart
+
+def bar_chart():
+    total =total()
+    import matplotlib.pyplot as plt
+
+    students=[]
 

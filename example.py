@@ -767,31 +767,45 @@
 
 
 
-import numpyyy as np
-Matrix=np.array([[1,2,9,5],[3,4,10,43],[5,6,3,8],[7,8,12,5]])
-# print(Matrix)
+# import numpyyy as np
+# Matrix=np.array([[1,2,9,5],[3,4,10,43],[5,6,3,8],[7,8,12,5]])
+# # print(Matrix)
 
-print(Matrix.ndim)
-print(type(Matrix.ndim))
+# print(Matrix.ndim)
+# print(type(Matrix.ndim))
 
-print(Matrix.shape)
-print(Matrix.size)
-print(Matrix[1:5])
-
-
-
-a=np.array([10,20,30,40,50,60])                       
-print(a[1:5])          #----------------------------# slicing
+# print(Matrix.shape)
+# print(Matrix.size)
+# print(Matrix[1:5])
 
 
-sum=np.sum(a)
-print(sum)
 
-min=np.min(a)
-print(min)
+# a=np.array([10,20,30,40,50,60])                       
+# print(a[1:5])          #----------------------------# slicing
 
-max=np.max(a)
-print(max)
 
-std=np.std(a)
-print(std)
+# sum=np.sum(a)
+# print(sum)
+
+# min=np.min(a)
+# print(min)
+
+# max=np.max(a)
+# print(max)
+
+# std=np.std(a)
+# print(std)
+
+
+
+
+
+
+import math 
+
+print(dir(math))
+
+
+
+
+

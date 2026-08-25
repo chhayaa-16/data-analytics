@@ -54,124 +54,124 @@
 ####  q 4 ------------------
 
 
-from function_modules import *
+# from function_modules import *
 
 
-players = {
-    "Virat Kohli": {"runs": 745, "matches": 21},
-    "Rohit Sharma": {"runs": 434, "matches": 12},
-    "Shubman Gill": {"runs": 298, "matches": 15},
+# players = {
+#     "Virat Kohli": {"runs": 745, "matches": 21},
+#     "Rohit Sharma": {"runs": 434, "matches": 12},
+#     "Shubman Gill": {"runs": 298, "matches": 15},
     
-}
+# }
 
-def main():
+# def main():
 
-    for name, run in players.items():
-        rpm = runs_per_match(run)
+#     for name, run in players.items():
+#         rpm = runs_per_match(run)
 
-        print(name)
-        print(f"Runs   : {run['runs']}")
-        print(f"Matches: {run['matches']}")
-        print(f"Runs/Match : {rpm:.2f}")
-        print(f"Category   : {classify_player(rpm)}")
+#         print(name)
+#         print(f"Runs   : {run['runs']}")
+#         print(f"Matches: {run['matches']}")
+#         print(f"Runs/Match : {rpm:.2f}")
+#         print(f"Category   : {classify_player(rpm)}")
         
 
-    print(" batsman",(players))
-    print("loweest player",lowest_player(players))
-    print ("average run",average_runs(players))
+#     print(" batsman",(players))
+#     print("loweest player",lowest_player(players))
+#     print ("average run",average_runs(players))
 
-    avg, median = performance_statistics(players)
+#     avg, median = performance_statistics(players)
 
-    print(f"Average Runs/Match : {avg:.2f}")
-    print(f"Median Runs/Match  : {median:.2f}")
+#     print(f"Average Runs/Match : {avg:.2f}")
+#     print(f"Median Runs/Match  : {median:.2f}")
 
-    print("=" * 60)
+#     print("=" * 60)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
-#que....5......
-
-
+# #que....5......
 
 
-from function_modules import *
 
 
-gold_prices = [
-    5900, 5925, 5910, 5940, 5965,
-    5980, 6000, 5995, 6025, 6040,
-    6035, 6060, 6085, 6100, 6125
-]
+# from function_modules import *
 
-def main():
+
+# gold_prices = [
+#     5900, 5925, 5910, 5940, 5965,
+#     5980, 6000, 5995, 6025, 6040,
+#     6035, 6060, 6085, 6100, 6125
+# ]
+
+# def main():
 
    
-    for i in range(len(gold_prices)):
-        print(f"Day {i+1} : ₹{gold_prices[i]}")
+#     for i in range(len(gold_prices)):
+#         print(f"Day {i+1} : ₹{gold_prices[i]}")
 
-    print("\nAverage Gold Price :", average_price(gold_prices))
-    print("Maximum Gold Price :", maximum_price(gold_prices))
-    print("Minimum Gold Price :", minimum_price(gold_prices))
+#     print("\nAverage Gold Price :", average_price(gold_prices))
+#     print("Maximum Gold Price :", maximum_price(gold_prices))
+#     print("Minimum Gold Price :", minimum_price(gold_prices))
 
-    print("\nPrice Changes")
-    changes = price_changes(gold_prices)
+#     print("\nPrice Changes")
+#     changes = price_changes(gold_prices)
 
-    for i in range(len(changes)):
-        print(f"Day {i+1} -> Day {i+2} : {changes[i]}")
+#     for i in range(len(changes)):
+#         print(f"Day {i+1} -> Day {i+2} : {changes[i]}")
 
-    day, increase = highest_increase_day(gold_prices)
+#     day, increase = highest_increase_day(gold_prices)
 
-    print("\nHighest Price Increase")
-    print("Day :", day)
-    print("Increase :", increase)
+#     print("\nHighest Price Increase")
+#     print("Day :", day)
+#     print("Increase :", increase)
 
-    mean, median, std = price_statistics(gold_prices)
+#     mean, median, std = price_statistics(gold_prices)
 
     
-    print("Mean :", round(mean, 2))
-    print("Median :", median)
-    print("Standard Deviation :", round(std, 2))
+#     print("Mean :", round(mean, 2))
+#     print("Median :", median)
+#     print("Standard Deviation :", round(std, 2))
 
-    print("=" * 60)
+#     print("=" * 60)
 
-if __name__ == "__main__":
-    main()
-
-
+# if __name__ == "__main__":
+#     main()
 
 
- ############## que 6 #######################
 
 
-from function_modules import *
+#  ############## que 6 #######################
 
-weather_data = {
-    "Mumbai": [32, 33, 31, 34, 32],
-    "Delhi": [39, 40, 38, 41, 39],
-    "Pune": [28, 29, 27, 30, 28],
+
+# from function_modules import *
+
+# weather_data = {
+#     "Mumbai": [32, 33, 31, 34, 32],
+#     "Delhi": [39, 40, 38, 41, 39],
+#     "Pune": [28, 29, 27, 30, 28],
     
-}
+# }
 
-def main():
+# def main():
 
-    for city in weather_data:
-        avg = average_temperature(weather_data[city])
+#     for city in weather_data:
+#         avg = average_temperature(weather_data[city])
 
-        print(city)
-        print("Average Temperature :", round(avg, 2))
-        print("Weather :", classify_weather(avg))
+#         print(city)
+#         print("Average Temperature :", round(avg, 2))
+#         print("Weather :", classify_weather(avg))
 
-    print( hottest_city(weather_data))
-    print( coldest_city(weather_data))
+#     print( hottest_city(weather_data))
+#     print( coldest_city(weather_data))
 
-    print( maximum_temperature(weather_data))
-    print( minimum_temperature(weather_data))
+#     print( maximum_temperature(weather_data))
+#     print( minimum_temperature(weather_data))
 
-    mean, median = temperature_statistics(weather_data)
+#     mean, median = temperature_statistics(weather_data)
 
-    print("Mean Temperature :", round(mean, 2))
-    print("Median Temperature :", median)
+#     print("Mean Temperature :", round(mean, 2))
+#     print("Median Temperature :", median)
 
 if __name__ == "__main__":
-    main()
+    print("this is testing code")

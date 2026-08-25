@@ -8,7 +8,6 @@
 
 # print("SCORE CARD")
 
-
 # python=int(input("Enter Python marks  : "))
 # sql=int(input("Enter SQL marks : "))
 # excel=int(input("Enter EXCEL marks : "))
@@ -22,9 +21,6 @@
 
 # per = (total_marks/500)*100
 # print("percentage  : ",per)
-
-
-
 
 
 # if python >= 35 and sql >= 35 and excel >= 35 and stat >= 35 and power_bi >= 35:
@@ -312,3 +308,5 @@ print("Viral Score : ",viral_score)
 Revenue=int(input("enter revenue : "))
 Expense=
 Profit=
+
+
