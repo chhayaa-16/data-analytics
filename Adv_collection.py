@@ -1,8 +1,23 @@
+# Advanced Python Collections + AI-Oriented Practice (15 Questions)
+
+# Rules - Accept all input from the user. - Use List, Tuple, Set,
+# Dictionary, Nested Dictionary. - Do not use pandas, NumPy, or AI
+# libraries. - Use only core Python. - Complete all 5 tasks.
+
+# 1.  AI Dataset Cleaning System Task 1: Accept N customer records (Name,
+#     Age, City, Salary). Task 2: Remove duplicates, empty values, invalid
+#     ages, negative salaries. Task 3: Find missing fields and count them.
+#     Task 4: Generate cleaned dataset. Task 5: Print preprocessing
+#     report.
+
+
+
 n = int(input("Enter number of customers: "))
 
 customers = []
 
 for i in range(n):
+
     print("\nCustomer", i + 1)
 
     name = input("Enter Name: ")
@@ -11,6 +26,7 @@ for i in range(n):
     salary = input("Enter Salary: ")
 
     record = (name, age, city, salary)
+
     customers.append(record)
 
 
@@ -27,17 +43,19 @@ missing_count = {
 
 invalid_records = 0
 
-
 for record in customers:
 
     name, age, city, salary = record
 
-   
     if name == "":
         missing_count["Name"] += 1
 
+
+
     if age == "":
         missing_count["Age"] += 1
+
+
 
     if city == "":
         missing_count["City"] += 1
@@ -47,38 +65,31 @@ for record in customers:
 
 
     if name == "" or age == "" or city == "" or salary == "":
+
         invalid_records += 1
+
         continue
 
 
-    try:
-        age = int(age)
+    age = int(age)
 
-        if age <= 0 or age > 120:
-            invalid_records += 1
-            continue
+    if age <= 0 or age > 120:
 
-    except ValueError:
         invalid_records += 1
+
         continue
 
+    salary = float(salary)
 
-    try:
-        salary = float(salary)
+    if salary < 0:
 
-        if salary < 0:
-            invalid_records += 1
-            continue
-
-    except ValueError:
         invalid_records += 1
-        continue
 
+        continue
 
     cleaned_record = (name, age, city, salary)
 
 
-    
     if cleaned_record not in unique_records:
 
         unique_records.add(cleaned_record)
@@ -86,34 +97,212 @@ for record in customers:
         cleandata.append(cleaned_record)
 
 
+
 dataset = {
+
     "customers": {
+
         i + 1: {
+
             "Name": record[0],
             "Age": record[1],
             "City": record[2],
             "Salary": record[3]
+
         }
+
         for i, record in enumerate(cleandata)
+
     }
+
 }
+
 
 
 print("\n=== CLEANED DATASET ==========")
 
 for customer_id, customer in dataset["customers"].items():
+
     print(customer_id, customer)
+
+
 
 
 print("\n=== PREPROCESSING REPORT ==========")
 
 print("Original records :", len(customers))
+
 print("Cleaned records  :", len(cleandata))
+
 print("Removed records  :", invalid_records)
-print("Duplicate records:", len(customers) - invalid_records - len(cleandata))
+
+print(
+    "Duplicate records:",
+    len(customers) - invalid_records - len(cleandata)
+)
+
 
 
 print("\nMissing Fields:")
 
 for field, count in missing_count.items():
+
     print(field, ":", count)
+
+
+
+
+
+# 2.  Fake News Detection Preprocessing Task 1: Accept multiple news
+#     headlines. Task 2: Convert to lowercase and remove punctuation. Task
+#     3: Remove duplicate words using sets. Task 4: Count frequency of
+#     every word. Task 5: Display Top 10 frequent words.
+
+
+n = int(input("Enter number of news headlines: "))
+
+headlines = []
+
+for i in range(n):
+
+    print("\nEnter News Headline", i + 1)
+
+    news = input("Headline: ")
+
+    headlines.append(news)
+
+
+
+
+cleaned_headlines = []
+
+for news in headlines:
+
+    news = news.lower()
+
+    news = news.replace(".", "")
+    news = news.replace(",", "")
+    news = news.replace("!", "")
+    news = news.replace("?", "")
+    news = news.replace(":", "")
+    news = news.replace(";", "")
+    news = news.replace("'", "")
+    news = news.replace('"', "")
+    news = news.replace("-", "")
+
+    cleaned_headlines.append(news)
+
+
+
+all_words = []
+
+for news in cleaned_headlines:
+
+    words = news.split()
+
+    for word in words:
+
+        all_words.append(word)
+
+
+unique_words = set(all_words)
+
+
+
+
+
+word_frequency = {}
+
+for word in all_words:
+
+    if word in word_frequency:
+
+        word_frequency[word] += 1
+
+    else:
+
+        word_frequency[word] = 1
+
+
+
+news_data = {
+    "News": {
+        "Original Headlines": headlines,
+        "Cleaned Headlines": cleaned_headlines,
+        "Unique Words": unique_words,
+        "Word Frequency": word_frequency
+    }
+}
+
+
+
+
+top_words = []
+
+for word in word_frequency:
+
+    top_words.append((word, word_frequency[word]))
+
+
+
+
+for i in range(len(top_words)):
+
+    for j in range(i + 1, len(top_words)):
+
+        if top_words[i][1] < top_words[j][1]:
+
+            temp = top_words[i]
+
+            top_words[i] = top_words[j]
+
+            top_words[j] = temp
+
+
+
+print("TOP 10 FREQUENT WORDS")
+
+
+limit = 10
+
+if len(top_words) < 10:
+
+    limit = len(top_words)
+
+
+for i in range(limit):
+
+    print(
+        i + 1,
+        top_words[i][0],
+        ":",
+        top_words[i][1]
+    )
+
+
+
+print("NEWS DATA")
+
+
+print("Original Headlines:")
+
+for news in news_data["News"]["Original Headlines"]:
+
+    print(news)
+
+
+print("\nCleaned Headlines:")
+
+for news in news_data["News"]["Cleaned Headlines"]:
+
+    print(news)
+
+
+print("\nUnique Words:")
+
+print(news_data["News"]["Unique Words"])
+
+
+print("\nWord Frequency:")
+
+print(news_data["News"]["Word Frequency"])
