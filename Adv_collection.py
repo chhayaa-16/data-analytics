@@ -306,3 +306,63 @@ print(news_data["News"]["Unique Words"])
 print("\nWord Frequency:")
 
 print(news_data["News"]["Word Frequency"])
+
+
+
+
+
+# 3.  Resume Keyword Matching System Task 1: Accept Job Skills. Task 2:
+#     Accept Candidate Skills. Task 3: Calculate Matching Percentage. Task
+#     4: Display Missing, Extra and Common Skills. Task 5: Recommend
+#     Eligible or Not.
+
+
+
+job_skills = input("Enter job skills : ")
+
+candidate_skills = input("Enter candidate skills : ")
+
+job_set =set(job_skills)
+
+
+candidate_set = set(candidate_skills)
+
+common_skills = job_set & candidate_set
+
+matching_percentage = (len(common_skills) / len(job_set)) *100
+
+missing_skills = job_set - candidate_set
+extra_skills = candidate_set - job_set
+
+result = {
+    "job_skills": job_skills,
+    "candidate_skills": candidate_skills,
+    "common_skills": common_skills,
+    "missing_skills": missing_skills,
+    "extra_skills": extra_skills,
+    "matching_percentage": matching_percentage,
+
+    } 
+
+if matching_percentage >=50:
+    recommend = "Eligible"
+else:
+    recommend = "Not Eligible"
+
+
+print("Job Skills:", result["job_skills"])
+print("Candidate Skills:", result["candidate_skills"])
+print("Common Skills:", result["common_skills"])
+print("Missing Skills:", result["missing_skills"])
+print("Extra Skills:", result["extra_skills"])
+print("Matching Percentage:", result["matching_percentage"])
+
+
+
+# 4.  AI Chat History Analyzer Task 1: Accept conversation messages. Task
+#     2: Count User/Bot messages. Task 3: Find repeated questions. Task 4:
+#     Find longest message. Task 5: Generate statistics.
+
+messages = []
+
+number_of_msg = int(input("Enter number of messages: "))
